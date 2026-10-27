@@ -19,12 +19,6 @@
   </a>
 </p>
 
-<p align="center">
-  Watch with sound:
-  <a href="https://github.com/sina-developer/LayoutFixer/releases/download/v0.1.0/layoutfixer-16x9.mp4">16:9</a> ·
-  <a href="https://github.com/sina-developer/LayoutFixer/releases/download/v0.1.0/layoutfixer-9x16.mp4">9:16</a> ·
-  <a href="https://github.com/sina-developer/LayoutFixer/releases/download/v0.1.0/layoutfixer-4x3.mp4">4:3</a>
-</p>
 
 ---
 
