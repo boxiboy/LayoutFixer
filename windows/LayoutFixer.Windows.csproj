@@ -12,7 +12,7 @@
     <RootNamespace>LayoutFixer</RootNamespace>
     <ApplicationIcon>assets\app.ico</ApplicationIcon>
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Product>LayoutFixer</Product>
     <Copyright>MIT License</Copyright>
     <!-- Lets the project compile on macOS/Linux too (it only runs on Windows). -->

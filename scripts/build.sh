@@ -1,8 +1,9 @@
 #!/bin/zsh
-# Builds build/LayoutFixer.app (and build/LayoutFixer.zip with --zip).
+# Builds build/LayoutFixer.app (and build/LayoutFixer-macOS.zip with --zip).
+# The version comes from $VERSION when set (the release workflow passes the tag).
 set -e
 cd "$(dirname "$0")/.."
-VERSION=0.1.0
+VERSION=${VERSION:-0.2.0}
 APP=build/LayoutFixer.app
 rm -rf $APP
 mkdir -p $APP/Contents/MacOS $APP/Contents/Resources
@@ -34,8 +35,8 @@ rm build/LayoutFixer-arm64 build/LayoutFixer-x86_64
 xattr -cr $APP
 codesign --force --sign - $APP
 if [[ "$1" == "--zip" ]]; then
-  rm -f build/LayoutFixer-$VERSION.zip
-  (cd build && ditto -c -k --norsrc --noextattr --keepParent LayoutFixer.app LayoutFixer-$VERSION.zip)
-  echo "built build/LayoutFixer-$VERSION.zip"
+  rm -f build/LayoutFixer-macOS.zip
+  (cd build && ditto -c -k --norsrc --noextattr --keepParent LayoutFixer.app LayoutFixer-macOS.zip)
+  echo "built build/LayoutFixer-macOS.zip"
 fi
 echo "built $APP"

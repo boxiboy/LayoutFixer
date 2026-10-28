@@ -111,7 +111,7 @@ func drawCover() {
 
     // Pills.
     var x = left
-    for label in ["macOS", "English ⇄ فارسی", "Free & open source"] {
+    for label in ["macOS & Windows", "English ⇄ فارسی", "Free & open source"] {
         let str = NSMutableAttributedString(attributedString:
             attributed(label, .systemFont(ofSize: 17, weight: .medium), .white.withAlphaComponent(0.82)))
         if let r = label.range(of: "فارسی") {
