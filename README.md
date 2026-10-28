@@ -93,7 +93,7 @@ It works the other way too: `sghl o,fd?` → `سلام خوبی؟`
 
 | Command | What it does | Suggested hotkey |
 |---|---|---|
-| **LayoutFixer Setup** | Checklist, hotkeys and a quick try-out. Opens on first use. | |
+| **Setup and Shortcuts** | Checklist, hotkeys and a quick try-out. Opens on first use. | |
 | **Fix Selected Text** | Fixes the selection in place, or the current line when nothing is selected. | `⌃ ⌥ F` |
 | **Undo Last Fix** | Undoes the last fix and switches the keyboard layout back. | `⌃ ⌥ Z` |
 | **Fix Clipboard** | Fixes the text on the clipboard. | |
@@ -104,7 +104,7 @@ It works the other way too: `sghl o,fd?` → `سلام خوبی؟`
 | **AI Writing Tools** | Fix, formal or casual Persian, translate, shorten. Needs Raycast Pro. | `⌃ ⌥ A` |
 | **Convert Text** | Type or paste text and preview every fix live. | |
 | **Switch Keyboard Layout** | English ⇄ Persian. | `⌃ ⌥ L` |
-| **LayoutFixer Menu Bar** | `EN` / `فا` in the menu bar, with quick actions. | |
+| **Keyboard Layout in Menu Bar** | `EN` / `فا` in the menu bar, with quick actions. | |
 | **Fix History** | Recent fixes, to copy or paste again. | |
 | **Personal Dictionary** | Words that are never converted or marked as misspelled. | |
 
@@ -136,7 +136,7 @@ command.
 
 ### First run
 
-Run any LayoutFixer command and **LayoutFixer Setup** opens:
+Run any LayoutFixer command and **Setup and Shortcuts** opens:
 
 1. **Checklist:** confirms both keyboard layouts are enabled and Raycast has Accessibility access,
    with buttons that open the right System Settings pages. Shows which Persian layout was detected.

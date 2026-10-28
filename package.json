@@ -4,7 +4,7 @@
   "title": "LayoutFixer",
   "description": "Fix English and Persian text typed with the wrong keyboard layout, check spelling, and tidy up Persian text.",
   "icon": "extension-icon.png",
-  "author": "mc",
+  "author": "macan",
   "categories": [
     "Productivity"
   ],
@@ -14,91 +14,82 @@
     "keyboard",
     "layout",
     "spelling",
-    "فارسی"
+    "\u0641\u0627\u0631\u0633\u06cc"
   ],
   "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
   "commands": [
     {
       "name": "setup",
-      "title": "LayoutFixer Setup",
-      "subtitle": "LayoutFixer",
+      "title": "Setup and Shortcuts",
       "description": "Check that everything is ready, set up hotkeys and try it out.",
       "mode": "view"
     },
     {
       "name": "fix-selection",
       "title": "Fix Selected Text",
-      "subtitle": "LayoutFixer",
-      "description": "Retype the selected text in the right layout (English ⇄ Persian). With nothing selected, fixes the current line.",
+      "description": "Retype the selected text in the right layout (English \u21c4 Persian). With nothing selected, fixes the current line.",
       "mode": "no-view"
     },
     {
       "name": "undo-last-fix",
       "title": "Undo Last Fix",
-      "subtitle": "LayoutFixer",
       "description": "Undo the last fix and switch the keyboard layout back.",
       "mode": "no-view"
     },
     {
       "name": "fix-clipboard",
       "title": "Fix Clipboard",
-      "subtitle": "LayoutFixer",
       "description": "Fix the layout of the text on the clipboard.",
       "mode": "no-view"
     },
     {
       "name": "fix-spelling",
       "title": "Check Spelling",
-      "subtitle": "LayoutFixer",
       "description": "Find spelling mistakes in the selected English or Persian text and pick corrections.",
       "mode": "view"
     },
     {
       "name": "finglish-to-persian",
       "title": "Finglish to Persian",
-      "subtitle": "LayoutFixer",
       "description": "Convert Persian written in Latin letters (salam khobi) to Persian script.",
       "mode": "no-view"
     },
     {
       "name": "clean-up-persian",
       "title": "Clean up Persian Text",
-      "subtitle": "LayoutFixer",
-      "description": "Fix half-spaces, punctuation, ی/ک and digits in the selected Persian text.",
+      "description": "Fix half-spaces, punctuation, \u06cc/\u06a9 and digits in the selected Persian text.",
       "mode": "no-view"
     },
     {
       "name": "persian-tools",
       "title": "Persian Tools",
-      "subtitle": "LayoutFixer",
-      "description": "Numbers to Persian words, Jalali ⇄ Gregorian dates, Persian ⇄ Latin digits.",
+      "description": "Numbers to Persian words, Jalali \u21c4 Gregorian dates, Persian \u21c4 Latin digits.",
       "mode": "view"
     },
     {
       "name": "ai-tools",
       "title": "AI Writing Tools",
-      "subtitle": "LayoutFixer",
       "description": "Fix, rewrite (formal or casual Persian), shorten or translate text with Raycast AI.",
       "mode": "view"
     },
     {
       "name": "convert-text",
       "title": "Convert Text",
-      "subtitle": "LayoutFixer",
       "description": "Type or paste text and preview every fix as you go.",
       "mode": "view"
     },
     {
       "name": "switch-layout",
       "title": "Switch Keyboard Layout",
-      "subtitle": "LayoutFixer",
       "description": "Toggle between your English and Persian keyboard layouts.",
       "mode": "no-view"
     },
     {
       "name": "menu-bar",
-      "title": "LayoutFixer Menu Bar",
-      "subtitle": "LayoutFixer",
+      "title": "Keyboard Layout in Menu Bar",
       "description": "Shows your current keyboard layout in the menu bar, with quick actions.",
       "mode": "menu-bar",
       "interval": "10s",
@@ -112,7 +103,7 @@
           "default": "text",
           "data": [
             {
-              "title": "Layout Name (EN / فا)",
+              "title": "Layout Name (EN / \u0641\u0627)",
               "value": "text"
             },
             {
@@ -130,14 +121,12 @@
     {
       "name": "fix-history",
       "title": "Fix History",
-      "subtitle": "LayoutFixer",
       "description": "Recent fixes, to copy or paste again. Turn it on in the extension settings.",
       "mode": "view"
     },
     {
       "name": "personal-dictionary",
       "title": "Personal Dictionary",
-      "subtitle": "LayoutFixer",
       "description": "Words that are never converted and never marked as misspelled.",
       "mode": "view"
     }
@@ -156,11 +145,11 @@
           "value": "auto"
         },
         {
-          "title": "Persian – Standard (ISIRI 2901)",
+          "title": "Persian \u2013 Standard (ISIRI 2901)",
           "value": "isiri2901"
         },
         {
-          "title": "Persian – Legacy",
+          "title": "Persian \u2013 Legacy",
           "value": "persian"
         }
       ]
@@ -224,7 +213,7 @@
     },
     {
       "name": "capsLock",
-      "label": "Fix text typed with Caps Lock on (hELLO → Hello)",
+      "label": "Fix text typed with Caps Lock on (hELLO \u2192 Hello)",
       "description": "Also reads SGHL as sghl when looking for Persian.",
       "type": "checkbox",
       "required": false,
@@ -240,7 +229,7 @@
     },
     {
       "name": "persianDigits",
-      "label": "Type digits as Persian (۱۲۳) when converting to Persian",
+      "label": "Type digits as Persian (\u06f1\u06f2\u06f3) when converting to Persian",
       "description": "Turn off to keep 123.",
       "type": "checkbox",
       "required": false,
@@ -300,15 +289,15 @@
     {
       "name": "cleanupHalfSpace",
       "title": "Persian Clean-up",
-      "label": "Half-spaces: می‌خواهم, کتاب‌ها, بزرگ‌تر",
-      "description": "Joins می / نمی, ها / های and تر / ترین with a half-space.",
+      "label": "Half-spaces: \u0645\u06cc\u200c\u062e\u0648\u0627\u0647\u0645, \u06a9\u062a\u0627\u0628\u200c\u0647\u0627, \u0628\u0632\u0631\u06af\u200c\u062a\u0631",
+      "description": "Joins \u0645\u06cc / \u0646\u0645\u06cc, \u0647\u0627 / \u0647\u0627\u06cc and \u062a\u0631 / \u062a\u0631\u06cc\u0646 with a half-space.",
       "type": "checkbox",
       "required": false,
       "default": true
     },
     {
       "name": "cleanupPunctuation",
-      "label": "Persian punctuation: ، ؛ ؟ «»",
+      "label": "Persian punctuation: \u060c \u061b \u061f \u00ab\u00bb",
       "description": "Next to Persian words only. Also removes the space before punctuation.",
       "type": "checkbox",
       "required": false,
@@ -324,7 +313,7 @@
     },
     {
       "name": "cleanupSpaces",
-      "label": "Extra spaces and kashida (ـ)",
+      "label": "Extra spaces and kashida (\u0640)",
       "description": "Collapses repeated spaces and removes stretched letters.",
       "type": "checkbox",
       "required": false,

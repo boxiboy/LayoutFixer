@@ -138,7 +138,7 @@ export default function Command() {
   );
 
   return (
-    <List isShowingDetail navigationTitle="LayoutFixer Setup" isLoading={sources === undefined}>
+    <List isShowingDetail navigationTitle="Setup and Shortcuts" isLoading={sources === undefined}>
       <List.Section title="1 · Checklist">
         <List.Item
           title="Keyboard Layouts"
@@ -259,7 +259,7 @@ ${shortcutTable}
             <List.Item.Detail
               markdown={`## Menu bar
 
-Shows **EN** or **فا** in the menu bar, with quick actions for every command. Press Enter to turn it on; to turn it off, deactivate the **LayoutFixer Menu Bar** command in Raycast's settings.`}
+Shows **EN** or **فا** in the menu bar, with quick actions for every command. Press Enter to turn it on; to turn it off, deactivate the **Keyboard Layout in Menu Bar** command in Raycast's settings.`}
             />
           }
           actions={
@@ -326,7 +326,7 @@ The other way: \`${EXAMPLE_ENGLISH_KEYS}\` becomes \`سلام خوبی؟\`.
           title="Finish Setup"
           icon={{ source: Icon.Checkmark, tintColor: Color.Green }}
           detail={
-            <List.Item.Detail markdown="You can open this again any time with the **LayoutFixer Setup** command, or from the menu bar icon." />
+            <List.Item.Detail markdown="You can open this again any time with the **Setup and Shortcuts** command, or from the menu bar icon." />
           }
           actions={
             <ActionPanel>
