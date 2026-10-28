@@ -34,6 +34,9 @@ sealed class Popup : Form
         stack.Controls.Add(title);
         stack.Controls.Add(hint);
         Controls.Add(stack);
+        // Create the window now (hidden): BeginInvoke only works once it exists, and the first
+        // suggestion arrives from a background thread before the popup has ever been shown.
+        _ = Handle;
     }
 
     protected override bool ShowWithoutActivation => true;

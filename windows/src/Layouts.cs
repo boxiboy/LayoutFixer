@@ -39,10 +39,16 @@ static class Layouts
         return result;
     }
 
-    /// The layout of the window you're typing in.
+    /// The layout of the window you're typing in. Uses the window with keyboard focus when Windows
+    /// reports one: in hosted windows (Store apps, some editors) the foreground window's own thread
+    /// can report a different layout than the one you're typing with.
     public static Layout? Current()
     {
-        uint thread = Native.GetWindowThreadProcessId(Native.GetForegroundWindow(), out _);
+        var foreground = Native.GetForegroundWindow();
+        uint thread = Native.GetWindowThreadProcessId(foreground, out _);
+        var info = new Native.GUITHREADINFO { cbSize = System.Runtime.InteropServices.Marshal.SizeOf<Native.GUITHREADINFO>() };
+        if (Native.GetGUIThreadInfo(thread, ref info) && info.hwndFocus != IntPtr.Zero)
+            thread = Native.GetWindowThreadProcessId(info.hwndFocus, out _);
         var hkl = Native.GetKeyboardLayout(thread);
         return LangOf(hkl) is { } lang ? new Layout(hkl, lang) : null;
     }
