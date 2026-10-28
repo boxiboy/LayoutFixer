@@ -193,6 +193,15 @@ Ideas and pull requests are welcome, for example:
 - English word list on Windows: Webster's Second International (public domain).
 - See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
+## Author
+
+Made by **Sina Gholizadeh**.
+
+- Website: [c-na.dev](https://c-na.dev)
+- Email: [hi@c-na.dev](mailto:hi@c-na.dev)
+
+Questions, bugs or ideas: [open an issue](https://github.com/sina-developer/LayoutFixer/issues) or send an email.
+
 ## License
 
 [MIT](LICENSE)
